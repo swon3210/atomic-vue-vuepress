@@ -1,0 +1,114 @@
+/*
+이곳은 스타일링을 모듈화한 공간입니다. 여기서 재사용성이 높은 CSS 속성들을 정의하고 이를 모듈처럼 다른 컴포넌트나 원자 요소에 붙여넣도록 합니다. 같은 모듈을 공유하고 있다면 이 mixin들을 변경하여 일률적으로 디자인을 바꿀 수 있습니다.
+*/
+
+@mixin anchor-list-light {
+  li {
+    list-style-type: none;
+    color: white;
+    a {
+      text-decoration: none;
+      color: white;
+      font-weight: 800;
+      &:hover {
+        color: #e0f4fd;
+      }
+    }
+  }
+}
+
+// 링크 리스트 어두운 텍스트
+@mixin anchor-list-dark {
+  li {
+    list-style-type: none;
+    color: #303030;
+    a {
+      text-decoration: none;
+      color: #303030;
+      font-weight: 800;
+      &:hover {
+        color: #7e7e7e;
+      }
+    }
+  }
+}
+
+
+// 테두리
+@mixin thin-border-bottom {
+  border-bottom: 0.3px solid rgba(0,0,0,0.5);
+}
+
+@mixin thin-border-right {
+  border-right: 0.3px solid rgba(0,0,0,0.5);
+}
+
+// 그림자
+@mixin right-and-left-shadow {
+  box-shadow: 4px 11px 23px -14px rgba(0,0,0,0.75);
+}
+
+@mixin block-shadow {
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
+}
+
+// 스크롤
+@mixin container-scroll-y {
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+		width: 10px;
+    background: none;
+	}
+	&::-webkit-scrollbar-thumb {
+      background: grey;
+      border-radius: 50px;
+	    opacity: .4;
+	}
+	&::-webkit-scrollbar-track {
+	    background: none;
+	}
+}
+
+@mixin container-scrollbar-none {
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar { 
+    display: none !important;
+  }
+}
+
+// 그리드 비율 - 데스크탑
+@mixin sideMinOnGrid {
+  display: none;
+}
+
+@mixin sideMinOffGrid {
+  grid-column: 1 / 4;
+}
+
+@mixin mainMinOnGrid {
+  grid-column: 1 / 17;
+}
+
+@mixin mainMinOffGrid {
+  grid-column: 4 / 17;
+}
+
+// 그리드 비율 - 모바일
+@mixin mobileSideMinOnGrid {
+  display: none;
+}
+
+@mixin mobileSideMinOffGrid {
+  grid-column: 1 / 2;
+}
+
+@mixin mobileMainMinOnGrid {
+  grid-column: 1 / 17;
+}
+
+@mixin mobileMainMinOffGrid {
+  grid-column: 2 / 17;
+}
+
+

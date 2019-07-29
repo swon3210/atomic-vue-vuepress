@@ -1,0 +1,28 @@
+/*
+이곳은 재사용성이 높은 애니메이션과 트랜지션 CSS 속성들을 모듈화하여 모아놓은 곳입니다.  아래 mixin의 내용을 변경하여 해당 mixin을 공유하고 있는 요소들에 일률적으로 변경사항을 반영할 수 있습니다.
+*/
+
+// 트랜지션
+@mixin button-color-transition ($hoverColor, $textColor) {
+  transition: background-color 0.5s;
+  &:hover {
+    color: $textColor;
+    background-color: $hoverColor;
+  }
+}
+
+@mixin background-color-transition($hoverColor) {
+  transition: background-color 0.5s;
+  &:hover {
+    background-color: $hoverColor;
+  }
+}
+
+
+// 애니메이션
+@mixin hover-color-effect($color) {
+  transition: background-color 0.5s;
+  &:hover {
+    background-color: $color;
+  }
+}

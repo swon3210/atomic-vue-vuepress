@@ -1,0 +1,172 @@
+@import "variables.scss";
+@import "animations.scss";
+@import "mixins.scss";
+
+/*
+원자들에 적용할 CSS 속성들이 모인 곳입니다. 이곳에서 중앙집권적으로 관리함으로써 소스코드를 직접 고치지 않아도 요소들의 디자인들을 일률적으로 바꿀 수 있습니다.
+
+모든 minxins들은 공통적인 디자인 요소를 갖지만, 크기, 색상은 변수를 전달받아 커스텀화 될수 있도록 합니다.
+
+그외의, padding, margin과 기타 배치를 위한 css 속성들은 해당 컴포넌트 안에서 지정합니다.
+*/
+
+
+// ------------ div(wrapper)
+@mixin square-block($widthAndHeight) {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  width: $widthAndHeight;
+  height: $widthAndHeight;
+}
+// ------------ heading
+
+// ------------ paragraph, text, label
+
+// ------------ anchor, button
+// 배경없이 텍스트만 있는 버튼
+@mixin text-anchor-button($color) {
+  display: inline-block;
+  color: $color;
+  text-decoration: none;
+  border: none;
+  text-align: center; 
+  font-size: 15px;
+  cursor: pointer;
+}
+
+// 플랫 디자인 버튼
+@mixin flat-button($color) {
+  
+}
+
+// 호버 트랜지션 버튼
+@mixin border-transition-button($color) {
+  width: 100%;
+  background: $color;
+  color:#fff;
+  border:none;
+  position:relative;
+  font-size:1.6em;
+  padding: 10px;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+  &:hover{
+    background:#fff;
+    color: $color;
+
+    &:before, &:after {
+      width:100%;
+      transition:800ms ease all;
+    }
+
+  }
+  &:before, &:after {
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: $color;
+    transition:400ms ease all;
+  }
+
+  &:after {
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+}
+// ------------ img, svg
+
+// 유저 아바타
+@mixin avatar($widthAndHeight) {
+  width: $widthAndHeight;
+  height: $widthAndHeight;
+}
+
+// 이미지
+@mixin imgWithRoundBorderAndPadding {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  padding: 5px;
+  border: 10px solid rgba(189, 189, 189, 0.5);
+}
+
+
+// ------------ list
+
+// ------------ table
+
+// ------------ input
+
+// 인풋
+@mixin inputWithBottomBorder {
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid $inputBottomBorderColor;
+}
+
+@mixin inputBasic  {
+  border: 1px solid rgba($color: #6b6b6b, $alpha: 0.3);
+  padding: 10px;
+}
+
+@mixin inputIconWithBackgroundColor ($backgroundColor) {
+  background-color: $backgroundColor;
+  color: white;
+  padding: 10px;
+  border: none;
+}
+
+@mixin inputIcon ($color) {
+  color: $color;
+  padding: 10px;
+  border: none;
+}
+
+@mixin inputLabelBasic {
+  font-weight: 600;
+  padding: 10px;
+}
+
+
+// ------------ textarea
+
+// 텍스트 AREA
+@mixin bottomBorderTextarea {
+  resize: none;
+  padding: 10px;
+  border: none;
+  height: 200px;
+  border-bottom: 1px solid $textareaBottomBorderColor;
+}
+
+@mixin boldLabel {
+  padding: 10px 0 10px 0;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+@mixin biggerCheckbox {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #bcbcbc;
+  cursor: pointer;
+}
+
+// ------------ select
+
+// 셀렉트 박스
+@mixin selectboxBasic {
+  padding: 10px;
+  border: 1px solid rgba($color: #6b6b6b, $alpha: 0.3);
+}
+
