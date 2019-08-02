@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>아토믹 컴포넌트</title>
+    <meta name="description" content="빠른 적용을 위한 문서">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+    
+    <link rel="preload" href="/assets/css/0.styles.d71bb9f4.css" as="style"><link rel="preload" href="/assets/js/app.71705f4a.js" as="script"><link rel="preload" href="/assets/js/3.b48cecc4.js" as="script"><link rel="preload" href="/assets/js/31.d7897cba.js" as="script"><link rel="prefetch" href="/assets/js/1.06fe9b07.js"><link rel="prefetch" href="/assets/js/10.dd61eb04.js"><link rel="prefetch" href="/assets/js/11.584257fa.js"><link rel="prefetch" href="/assets/js/12.fcd13ac6.js"><link rel="prefetch" href="/assets/js/13.484ee8c5.js"><link rel="prefetch" href="/assets/js/14.53c421d4.js"><link rel="prefetch" href="/assets/js/15.6b4516c3.js"><link rel="prefetch" href="/assets/js/16.d35329fa.js"><link rel="prefetch" href="/assets/js/17.59c26022.js"><link rel="prefetch" href="/assets/js/18.e4e4808b.js"><link rel="prefetch" href="/assets/js/19.707ce96c.js"><link rel="prefetch" href="/assets/js/20.64c44a21.js"><link rel="prefetch" href="/assets/js/21.9f75edae.js"><link rel="prefetch" href="/assets/js/22.ca4eb3cb.js"><link rel="prefetch" href="/assets/js/23.29af4981.js"><link rel="prefetch" href="/assets/js/24.96faa361.js"><link rel="prefetch" href="/assets/js/25.df36d808.js"><link rel="prefetch" href="/assets/js/26.f5653237.js"><link rel="prefetch" href="/assets/js/27.e6f3b6f2.js"><link rel="prefetch" href="/assets/js/28.1dbaa181.js"><link rel="prefetch" href="/assets/js/29.ae2d205d.js"><link rel="prefetch" href="/assets/js/30.d606b7eb.js"><link rel="prefetch" href="/assets/js/32.5c9ae17c.js"><link rel="prefetch" href="/assets/js/33.f4cfe265.js"><link rel="prefetch" href="/assets/js/34.993f3a17.js"><link rel="prefetch" href="/assets/js/35.08604875.js"><link rel="prefetch" href="/assets/js/36.ea96a19f.js"><link rel="prefetch" href="/assets/js/37.42813610.js"><link rel="prefetch" href="/assets/js/38.515da636.js"><link rel="prefetch" href="/assets/js/39.52044db6.js"><link rel="prefetch" href="/assets/js/4.afc27412.js"><link rel="prefetch" href="/assets/js/40.e68a65e2.js"><link rel="prefetch" href="/assets/js/41.7cb6daf7.js"><link rel="prefetch" href="/assets/js/42.1fd4e569.js"><link rel="prefetch" href="/assets/js/43.46fb2086.js"><link rel="prefetch" href="/assets/js/44.f81b0a06.js"><link rel="prefetch" href="/assets/js/45.47651656.js"><link rel="prefetch" href="/assets/js/46.697121cf.js"><link rel="prefetch" href="/assets/js/47.8198af79.js"><link rel="prefetch" href="/assets/js/48.c5d9980e.js"><link rel="prefetch" href="/assets/js/49.d68db2fb.js"><link rel="prefetch" href="/assets/js/5.5188c713.js"><link rel="prefetch" href="/assets/js/6.5fd24d64.js"><link rel="prefetch" href="/assets/js/7.116eefbc.js"><link rel="prefetch" href="/assets/js/8.8f517ece.js"><link rel="prefetch" href="/assets/js/9.e38089c6.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d71bb9f4.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">아토믹 컴포넌트</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">HOME</a></div><div class="nav-item"><a href="/guide/" class="nav-link">가이드</a></div><div class="nav-item"><a href="/examples/" class="nav-link router-link-exact-active router-link-active">예시</a></div><div class="nav-item"><a href="/grids/" class="nav-link">그리드</a></div><div class="nav-item"><a href="/components/" class="nav-link">컴포넌트</a></div><div class="nav-item"><a href="/mixins/" class="nav-link">믹스인</a></div><div class="nav-item"><a href="/api/" class="nav-link">API</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">HOME</a></div><div class="nav-item"><a href="/guide/" class="nav-link">가이드</a></div><div class="nav-item"><a href="/examples/" class="nav-link router-link-exact-active router-link-active">예시</a></div><div class="nav-item"><a href="/grids/" class="nav-link">그리드</a></div><div class="nav-item"><a href="/components/" class="nav-link">컴포넌트</a></div><div class="nav-item"><a href="/mixins/" class="nav-link">믹스인</a></div><div class="nav-item"><a href="/api/" class="nav-link">API</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/examples/" class="active sidebar-link">/examples/</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><div class="language-HTML extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>grid-block-container<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>grid-block box-shadow<span class="token punctuation">&quot;</span></span> <span class="token attr-name">v-for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>block in blocks<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>block.id<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>img<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>block.imgSrc<span class="token punctuation">&quot;</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span><span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>heading<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>{{block.heading}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>{{block.text}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>,
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>grid-block-container<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>grid-block box-shadow<span class="token punctuation">&quot;</span></span> <span class="token attr-name">v-for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>block in blocks<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>block.id<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>img<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>block.imgSrc<span class="token punctuation">&quot;</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span><span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>heading<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>{{block.heading}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>{{block.text}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+,
+
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> molecule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@/assets/vueMixins/localMixins'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  mixins<span class="token punctuation">:</span> <span class="token punctuation">[</span>molecule<span class="token punctuation">]</span><span class="token punctuation">,</span>
+  props<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    blocks<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      type<span class="token punctuation">:</span> Array<span class="token punctuation">,</span>
+      <span class="token function-variable function">default</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span> id<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> heading<span class="token punctuation">:</span> <span class="token string">&quot;heading&quot;</span><span class="token punctuation">,</span> text<span class="token punctuation">:</span> <span class="token string">&quot;text&quot;</span><span class="token punctuation">,</span> imgSrc<span class="token punctuation">:</span> <span class="token string">&quot;~/assets/img/avatar.png&quot;</span> <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  computed<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span class="token punctuation">,</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> molecule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@/assets/vueMixins/localMixins'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  mixins<span class="token punctuation">:</span> <span class="token punctuation">[</span>molecule<span class="token punctuation">]</span><span class="token punctuation">,</span>
+  props<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    blocks<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      type<span class="token punctuation">:</span> Array<span class="token punctuation">,</span>
+      <span class="token function-variable function">default</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span> id<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> heading<span class="token punctuation">:</span> <span class="token string">&quot;heading&quot;</span><span class="token punctuation">,</span> text<span class="token punctuation">:</span> <span class="token string">&quot;text&quot;</span><span class="token punctuation">,</span> imgSrc<span class="token punctuation">:</span> <span class="token string">&quot;~/assets/img/avatar.png&quot;</span> <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  computed<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">,</span>
+
+</code></pre></div>&quot; scoped&gt; extra-class&quot;&gt;<pre class="language-text"><code>.grid-block-container {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+
+  .grid-block {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center; 
+    padding: 10px;
+
+    .img {
+      width: 100px;
+    }
+
+    .heading {
+      font-size: 24px;
+    }
+
+    .text {
+      font-size: 15px;
+    }
+
+  }
+}
+
+.box-shadow {
+  @include block-shadow;
+}
+&lt;/style&gt;,
+.grid-block-container {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+
+  .grid-block {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center; 
+    padding: 10px;
+
+    .img {
+      width: 100px;
+    }
+
+    .heading {
+      font-size: 24px;
+    }
+
+    .text {
+      font-size: 15px;
+    }
+
+  }
+}
+
+.box-shadow {
+  @include block-shadow;
+}
+,
+
+</code></pre></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.71705f4a.js" defer></script><script src="/assets/js/3.b48cecc4.js" defer></script><script src="/assets/js/31.d7897cba.js" defer></script>
+  </body>
+</html>

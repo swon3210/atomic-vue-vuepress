@@ -52,7 +52,6 @@
 
     <div class="code">
       <span class="props"><{{fileName}}
-        야 아직 '' 처리 안했다.
         <br />
         <span
           class="prop"
@@ -61,7 +60,7 @@
           :key="key"
         >
           <!--불린일 경우 ''없애줘야 한다.-->
-          &nbsp; &nbsp;{{key}}="'{{value}}''"
+          &nbsp; &nbsp;:{{key}}="{{value | isBoolean}}"
           <br />
         </span>
         />
@@ -142,6 +141,15 @@ export default {
           {title: 'person1', text: '프론트엔드', id: 4 },
           {title: 'person2', text: '백엔드', id: 5 }
         ]
+      }
+    }
+  },
+  filters: {
+    isBoolean (val) {
+      if (typeof(val) === "boolean") {
+        return val
+      } else {
+        return `'${val}'`
       }
     }
   },

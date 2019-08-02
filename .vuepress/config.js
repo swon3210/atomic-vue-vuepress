@@ -15,15 +15,20 @@ module.exports = {
     nav: [
       {text: 'HOME', link: '/'},
       {text: '가이드', link: '/guide/'},
+      {text: '예시', link: '/examples/'},
       {text: '그리드', link: '/grids/'},
       {text: '컴포넌트', link: '/components/'},
-      {text: '클래스', link: '/classes/'},
+      {text: '믹스인', link: '/mixins/'},
       {text: 'API', link: '/api/'},
     ],
     sidebar: {
       '/guide/': [
         '',
-        'frontend'
+        'QuickStart',
+        'UIComposition'
+      ],
+      '/examples/': [
+        '',
       ],
       '/grids/': [
         '',
@@ -40,9 +45,21 @@ module.exports = {
         'SidebarList',
         'TextBlocks',
         'ThumnailBlocks',
+        'GridBlocks'
       ],
-      '/classes/': [
-        ''
+      '/mixins/': [
+        '',
+        'Wrapper(Div)',
+        'Animation',
+        'Transition',
+        'Text',
+        'AnchorAndButton',
+        'ImgAndSvg',
+        'TextInput',
+        'CheckboxInput',
+        'Icon',        
+        'Selectbox',
+        'Others'
       ],
       '/api/': [
         ''
